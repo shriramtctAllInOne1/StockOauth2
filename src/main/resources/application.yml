@@ -1,0 +1,48 @@
+spring:
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      database: oauth
+#      username:
+#      password:
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+  output:
+    ansi:
+        enabled: always
+    
+constant:
+   tokenUrl: /oauth/token/"
+   clientId: web-client
+   clientScret: web-client-secret
+   resourceId: oauth
+   socpe:
+    - read
+    - write
+    - other
+   userName: ram
+   password: ram
+   grantType: 
+    - authorization_code
+    - password
+    - refresh_token
+    - client_credentials
+   accessTokenValidity: 60
+   refreshTokenValidity: 14400
+   registerdRedirectUrl: http://localhost:8082/resource-service
+   roles: 
+    - ADMIN
+    - ROLE
+    
+logging:
+  file: logs/application-debug.log
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    org.springframework.web: DEBUG
+    com.stokc.oauth2.authserver: DEBUG
+    org.hibernate: DEBUG
+    
+

@@ -111,7 +111,7 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 	 */
 	@Override
 	public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
-		oauthServer.tokenKeyAccess(AuthConstant.PERMIT_ALL).checkTokenAccess(config.getSocpe().get(2));
+		oauthServer.tokenKeyAccess(AuthConstant.PERMIT_ALL).checkTokenAccess("isAuthenticated()");
 		oauthServer.allowFormAuthenticationForClients();
 	}
 

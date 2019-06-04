@@ -1,3 +1,6 @@
+server:
+  port: 8088
+  
 spring:
   data:
     mongodb:
@@ -30,7 +33,7 @@ constant:
     - client_credentials
    accessTokenValidity: 60
    refreshTokenValidity: 14400
-   registerdRedirectUrl: http://localhost:8082/resource-service
+   registerdRedirectUrl: http://localhost:8082
    roles: 
     - ADMIN
     - ROLE
@@ -42,7 +45,7 @@ logging:
     file: "%d %-5level [%thread] %logger : %msg%n"
   level:
     org.springframework.web: DEBUG
-    com.stokc.oauth2.authserver: DEBUG
+    com.stokck.oauth2.authserver: DEBUG
     org.hibernate: DEBUG
     
 

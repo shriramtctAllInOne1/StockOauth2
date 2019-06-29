@@ -80,7 +80,7 @@ public class MongoUserDetailsService implements UserDetailsService {
 		clientDetails.setAuthorizedGrantTypes(Sets.newHashSet(config.getGrantType().get(0),
 				config.getGrantType().get(1), config.getGrantType().get(2), config.getGrantType().get(3)));
 		clientDetails.setRegisteredRedirectUri(Sets.newHashSet(config.getRegisterdRedirectUrl()));
-		clientDetails.setAuthorities(AuthorityUtils.createAuthorityList(config.getRoles().get(1)));
+		clientDetails.setAuthorities(AuthorityUtils.createAuthorityList(config.getRoles().get(0)));
 		clientDetails.setAccessTokenValiditySeconds(config.getAccessTokenValidity());
 		clientDetails.setRefreshTokenValiditySeconds(config.getRefreshTokenValidity());
 		clientDetails.setAutoApprove(false);

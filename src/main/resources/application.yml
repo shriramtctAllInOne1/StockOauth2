@@ -35,8 +35,8 @@ constant:
    refreshTokenValidity: 14400
    registerdRedirectUrl: http://localhost:8082
    roles: 
-    - ADMIN
-    - USER
+    - ROLE_ADMIN
+    - ROLE_USER
     
 logging:
   file: logs/application-debug.log
